@@ -1,0 +1,44 @@
+Author: Rene Jacques
+February 26, 2019
+
+Necessary Libraries:
+	csv, random
+
+Main File:
+	project_1_final.py
+
+Secondary File:
+	node.py
+
+Run Instructions:
+
+Run project_1_final.py in command line in order to be able to input start states and goal states
+	If you do not want to run with user input then change the user_input flag to be False in App() at the bottom of project_1_final.py
+
+Output Files:
+	nodes.txt 
+		- output of all nodes that have been created while solving the puzzle
+		- format is column first and space separated
+		- eg: puzzle state = 123
+							 456
+							 780
+			  output format: 1 4 7 2 5 6 3 6 0
+		- line number in text file corresponds to node index
+
+	node_path.txt
+		- output of all nodes in the path between the starting state and the goal state assuming that a solution is possible
+		- if no solution is possible then this file will be empty
+		- format is: column first and space separated
+		- eg: puzzle state = 123
+							 456
+							 780
+			  output format: 1 4 7 2 5 6 3 6 0
+		- line number in text file corresponds to node index
+
+	nodes_info.txt
+		- output of the info for each node that has been visited while solving the puzzle
+		- format is: node index, parent node index, cost to reach node and space separated
+		- Note: cost to reach node may be incorrect at the moment but is not the same for each node
+		- eg: node index = 45, parent node index = 12, cost to reach nodes = 4
+			  output format: 45 12 4
+		- line number in text file corresponds to node index
